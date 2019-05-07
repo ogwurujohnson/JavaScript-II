@@ -102,4 +102,11 @@ function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
+  let uniq = [...new Set(array)];
+  cb(uniq);
 }
+
+removeDuplicates([1,2,3,1,2,4,5,6,7,5,9,5], outputCallback);
+removeDuplicates([1,2,3,1,2,4,5,6,7,5,9,5], (noduplicate) => {
+  console.log(noduplicate);
+});
