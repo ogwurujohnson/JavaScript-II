@@ -24,14 +24,31 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
 
 */
 
+// callback function
+function outputCallback(message) {
+  console.log(message);
+}
 
+// problem 1
 function getLength(arr, cb) {
   // getLength passes the length of the array into the callback.
+  const length = arr.length;
+  cb(length);
 }
+
+getLength([1,2,3,4], outputCallback);
+// or 
+getLength([1,2,3,4], (message) => {
+  console.log(message);
+});
+
+
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
 }
+
+// potential solution2
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
