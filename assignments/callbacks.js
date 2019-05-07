@@ -46,13 +46,27 @@ getLength([1,2,3,4], (message) => {
 
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  const last = arr[arr.length-1];
+  cb(last);
 }
+last([1,2,3,5], outputCallback);
+// or 
+last([1,2,3,5], (error) => {
+  console.log(error);
+});
 
 // potential solution2
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  const sum = x + y;
+  cb(sum);
 }
+sumNums(2,4,outputCallback);
+// or
+sumNums(2,4, (sum) => {
+  console.log(sum);
+});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
