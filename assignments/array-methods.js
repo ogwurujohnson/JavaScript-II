@@ -100,3 +100,8 @@ const newArray = runners.filter((runner) => {
 console.log(newArray);
 
 // Problem 3
+// calculate excess at the end of donation campaign
+let leftOver = [];
+const target = 5000
+leftOver.push(runners.reduce((total, runner) => total+=runner.donation,0 - target));
+console.log(leftOver);
