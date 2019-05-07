@@ -85,8 +85,18 @@ console.log(ticketPriceTotal);
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// convert each company name to capital letter and return them inm an array
+let upperCompany = [];
+runners.forEach((runner) => {
     upperCompany.push(runner.company_name.toUpperCase());
+});
+console.log(upperCompany);
 
 // Problem 2
+//find runners whose email domain name extension are .edu
+const newArray = runners.filter((runner) => {
+    return runner.email.split('.').includes('edu');
+});
+console.log(newArray);
 
 // Problem 3
